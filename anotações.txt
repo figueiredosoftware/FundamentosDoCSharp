@@ -1,0 +1,12 @@
+Fundamentos do C#
+=================
+
+Usando comandos CLI:
+
+DOTNET new --list : mostra todos templates disponíveis no dot.net
+
+dotnet new sln -n Curso : Cria uma solução que se chama curso
+
+dotnet new console -n ProjetoAulas -f net8.0 : Cria projeto chamado ProjetoAulas na versão do framework 8.0
+
+dotnet sln Curso.sln add ProjetoAulas : Adiciona o projeto ProjetoAulas a solução Curso.sln
