@@ -6,14 +6,37 @@ using System.Threading.Tasks;
 
 namespace Cadastro
 {
+    public static class Calculos
+    {
+        public static int SomarNumeros(int a, int b)
+        {
+            return a + b;
+        }
+
+        private static void AulaClasses()
+        {
+
+        }
+    }
+
     public class Produto
     {
+        private int Id;
         public string Descricao { get; set; }
 
         public void ImprimirDescricao()
         {
-            Descricao = "Fita";
-            Console.WriteLine($"O valor de produto.Descricao dentro do método é : {Descricao}");
+            Console.WriteLine($"O produto é  : " + GetId() + " - " + Descricao);
+        }
+
+        public void SetId( int id)
+        {
+            Id = id;
+        }
+
+        public int GetId()
+        {
+            return Id;
         }
 
     }

@@ -1052,11 +1052,20 @@ class Program
         // POO - Programação orientada a objeto
         Console.WriteLine("\n\n POO = Programação orientada a objeto");
 
-        Produto produto = new Produto();
+        
+        Produto produto = new Produto(); //instanciando classe Produto
+        produto.SetId(13);
+        produto.Descricao = "Durex";
         produto.ImprimirDescricao();
 
 
 
+        var resultado = Calculos.SomarNumeros(4,3); //classe cálculos não precisa instanciar porque ela é estática
+        Console.WriteLine($"O resultado da soma é : {resultado}");
+
+
+
+        
 
 
         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu.");
