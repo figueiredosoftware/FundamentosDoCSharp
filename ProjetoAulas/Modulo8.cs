@@ -23,6 +23,13 @@ namespace Cadastro
     {
         private int Id;
         public string Descricao { get; set; }
+        public int Estoque1 { get;} //como tem somente o Get, então essa propriedade é somente leitura
+        public readonly int Estoque2;  //como tem somente o Get, então essa propriedade é somente leitura
+
+        public Produto()
+        {
+            Estoque2 = 1;
+        }
 
         public void ImprimirDescricao()
         {
@@ -38,6 +45,15 @@ namespace Cadastro
         {
             return Id;
         }
+
+        public void AulaPropriedadeSomenteLeitura()
+        {
+            Descricao = "Mouse";
+
+            Console.WriteLine($"O produto {Descricao} tem {Estoque2} de estoque");
+        }
+
+
 
     }
 }

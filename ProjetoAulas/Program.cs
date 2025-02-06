@@ -1063,9 +1063,14 @@ class Program
         var resultado = Calculos.SomarNumeros(4,3); //classe cálculos não precisa instanciar porque ela é estática
         Console.WriteLine($"O resultado da soma é : {resultado}");
 
+        produto.AulaPropriedadeSomenteLeitura();
 
 
-        
+
+
+
+
+
 
 
         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu.");
