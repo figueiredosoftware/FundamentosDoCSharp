@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -52,8 +53,39 @@ namespace Cadastro
 
             Console.WriteLine($"O produto {Descricao} tem {Estoque2} de estoque");
         }
-
-
-
     }
+
+    public class Pessoa
+    {
+        public int Id { get; set; }
+        public string Endereco { get; set; }
+        public string Cidade { get; set; }
+        public string Cep { get; set; }
+
+        public void ImprimirDados()
+        {
+            Console.WriteLine("Código: " + Id);
+            Console.WriteLine("Código: " + Endereco);
+            Console.WriteLine("Código: " + Cidade);
+            Console.WriteLine("Código: " + Cep);
+        }
+    }
+
+    public class PessoaFisica : Pessoa
+    {
+        public string Cpf { get; set; }
+
+        public void ImprimirCpf()
+        {
+            Console.WriteLine("Cpf: " + Cpf);
+        }
+    }
+
+    public class Funcionario : PessoaFisica
+    {
+        public string Matricula { get; set; }
+    }
+
+
+
 }

@@ -30,6 +30,7 @@ class Program
             Console.WriteLine("16. While / Do While");
             Console.WriteLine("17. Break / Continue");
             Console.WriteLine("18. POO - Programação orientada a objeto");
+            Console.WriteLine("19. POO - Herança");
             Console.WriteLine("30. Sair");
             Console.Write("Escolha uma opção: ");
 
@@ -88,6 +89,9 @@ class Program
                     break;
                 case "18":
                     ExecutarOpcao18();
+                    break;
+                case "19":
+                    ExecutarOpcao19();
                     break;
                 case "30":
                     exit = true;
@@ -1066,10 +1070,34 @@ class Program
         produto.AulaPropriedadeSomenteLeitura();
 
 
+        Console.WriteLine("\nPressione qualquer tecla para voltar ao menu.");
+        Console.ReadKey();
+    }
 
+    static void ExecutarOpcao19()
+    {
+        // POO - Programação orientada a objeto
+        Console.WriteLine("\n\n Herança");
 
+        //PessoaFisica pessoaFisica = new PessoaFisica();
+        //pessoaFisica.Id = 1;
+        //pessoaFisica.Endereco = "Endereço Teste";
+        //pessoaFisica.Cidade = "Cidade Teste";
+        //pessoaFisica.Cep = "13280-298";
+        //pessoaFisica.Cpf = "150.002.778-21";
 
+        //pessoaFisica.ImprimirDados();
+        //pessoaFisica.ImprimirCpf();
 
+        Funcionario funcionario = new Funcionario();
+        funcionario.Id = 1;
+        funcionario.Endereco = "Endereço Teste";
+        funcionario.Cidade = "Cidade Teste";
+        funcionario.Cep = "13280-298";
+        funcionario.Cpf = "150.002.778-21";
+
+        funcionario.ImprimirDados();
+        funcionario.ImprimirCpf();
 
 
 
