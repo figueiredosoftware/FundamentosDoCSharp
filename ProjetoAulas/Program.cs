@@ -31,6 +31,8 @@ class Program
             Console.WriteLine("17. Break / Continue");
             Console.WriteLine("18. POO - Programação orientada a objeto");
             Console.WriteLine("19. POO - Herança");
+            Console.WriteLine("20. POO - Classe Selada");
+            Console.WriteLine("21. POO - Classe Abstrata");
             Console.WriteLine("30. Sair");
             Console.Write("Escolha uma opção: ");
 
@@ -92,6 +94,12 @@ class Program
                     break;
                 case "19":
                     ExecutarOpcao19();
+                    break;
+                case "20":
+                    ExecutarOpcao20();
+                    break;
+                case "21":
+                    ExecutarOpcao21();
                     break;
                 case "30":
                     exit = true;
@@ -1099,6 +1107,36 @@ class Program
         funcionario.ImprimirDados();
         funcionario.ImprimirCpf();
 
+
+
+        Console.WriteLine("\nPressione qualquer tecla para voltar ao menu.");
+        Console.ReadKey();
+    }
+
+    static void ExecutarOpcao20()
+    {
+        // POO - Classe selada
+        Console.WriteLine("\n\n Classe selada");
+
+        Configuracao configuracao = new Configuracao();
+        configuracao.Host = "localhost";
+
+
+        Console.WriteLine(configuracao.Host);
+
+
+        Console.WriteLine("\nPressione qualquer tecla para voltar ao menu.");
+         Console.ReadKey();
+    }
+
+    static void ExecutarOpcao21()
+    {
+        // POO - Classe Abstrata
+        Console.WriteLine("\n\n Classe abstrata");
+
+        Cachorro cachorro = new Cachorro();
+        cachorro.Nome = "Lara";
+        cachorro.ImprimirDados();
 
 
         Console.WriteLine("\nPressione qualquer tecla para voltar ao menu.");

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -85,6 +86,41 @@ namespace Cadastro
     {
         public string Matricula { get; set; }
     }
+
+
+    //Classe selada não pode ser herdada mas pode ser instanciada por qualquer método
+    public sealed class Configuracao
+    {
+        public string Host { get; set; }
+    }
+
+    //public sealed class ConfiguracaoLocal : Configuracao
+    //{
+    //    public string Host { get; set; }
+    //}
+
+    //Classe abstrata : não pode ser instanciada por nenhum outro método, apenas herdada
+    public abstract class Animal
+    {
+        public string Nome { get; set; }
+
+        public abstract string GetInformacoes();
+        public void ImprimirDados()
+        {
+            Console.WriteLine("Nome animal : " + Nome);
+            Console.WriteLine("Informacoes : " + GetInformacoes());
+        }
+    }
+
+    public class Cachorro : Animal
+    {
+        
+        public override string GetInformacoes()
+        {
+            return "Cachorro é um bom amigo";
+        }
+    }
+
 
 
 
